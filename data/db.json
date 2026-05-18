@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "id": "item_blazer",
+      "name": "Black blazer",
+      "category": "Outerwear",
+      "colors": [
+        "black"
+      ],
+      "season": "Fall",
+      "price": 88,
+      "source": "Closet",
+      "wearCount": 14,
+      "notes": "Works for class presentations and dinners.",
+      "image": ""
+    },
+    {
+      "id": "item_denim",
+      "name": "Straight-leg denim",
+      "category": "Bottoms",
+      "colors": [
+        "blue"
+      ],
+      "season": "All year",
+      "price": 64,
+      "source": "Closet",
+      "wearCount": 21,
+      "notes": "Default campus piece.",
+      "image": ""
+    },
+    {
+      "id": "item_tank",
+      "name": "White ribbed tank",
+      "category": "Tops",
+      "colors": [
+        "white"
+      ],
+      "season": "Summer",
+      "price": 22,
+      "source": "Closet",
+      "wearCount": 18,
+      "notes": "Layering base.",
+      "image": ""
+    },
+    {
+      "id": "item_boots",
+      "name": "Brown ankle boots",
+      "category": "Shoes",
+      "colors": [
+        "brown"
+      ],
+      "season": "Fall",
+      "price": 130,
+      "source": "Closet",
+      "wearCount": 9,
+      "notes": "Great, but less useful in rain.",
+      "image": ""
+    }
+  ],
+  "shopping": [
+    {
+      "id": "shop_red_sweater",
+      "name": "Red sweater",
+      "category": "Tops",
+      "price": 74,
+      "plannedWears": 9,
+      "reason": "Color pop for denim and black blazer.",
+      "status": "watch"
+    },
+    {
+      "id": "shop_rain_shoe",
+      "name": "Waterproof walking shoe",
+      "category": "Shoes",
+      "price": 112,
+      "plannedWears": 18,
+      "reason": "Campus rain gap.",
+      "status": "candidate"
+    }
+  ],
+  "outfits": []
+}
