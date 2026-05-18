@@ -68,6 +68,10 @@ function cleanNumber(value, fallback = 0) {
 }
 
 function cleanItem(payload) {
+  const image =
+    typeof payload.image === "string" && (payload.image.startsWith("data:image/") || payload.image.startsWith("/assets/"))
+      ? payload.image
+      : "";
   return {
     id: payload.id || `item_${crypto.randomUUID()}`,
     name: cleanText(payload.name, "Untitled item"),
@@ -84,7 +88,7 @@ function cleanItem(payload) {
     source: cleanText(payload.source, "Closet"),
     wearCount: Math.round(cleanNumber(payload.wearCount)),
     notes: cleanText(payload.notes),
-    image: typeof payload.image === "string" && payload.image.startsWith("data:image/") ? payload.image : ""
+    image
   };
 }
 
@@ -101,6 +105,10 @@ function cleanShopping(payload) {
 }
 
 function cleanOutfit(payload) {
+  const image =
+    typeof payload.image === "string" && (payload.image.startsWith("data:image/") || payload.image.startsWith("/assets/"))
+      ? payload.image
+      : "";
   return {
     id: payload.id || `fit_${crypto.randomUUID()}`,
     date: cleanText(payload.date, new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })),
@@ -109,7 +117,7 @@ function cleanOutfit(payload) {
     detectedTags: Array.isArray(payload.detectedTags)
       ? payload.detectedTags.map((tag) => cleanText(tag)).filter(Boolean).slice(0, 8)
       : [],
-    image: typeof payload.image === "string" && payload.image.startsWith("data:image/") ? payload.image : ""
+    image
   };
 }
 

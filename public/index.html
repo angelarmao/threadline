@@ -30,15 +30,6 @@
             <a href="#purchases">Purchases</a>
             <a href="#friends">Friends</a>
           </nav>
-          <div class="swatches" aria-label="Palette">
-            <span class="swatch black"></span>
-            <span class="swatch pink"></span>
-            <span class="swatch yellow"></span>
-            <span class="swatch blue"></span>
-            <span class="swatch mint"></span>
-            <span class="swatch red"></span>
-          </div>
-          <button class="text-button" id="seedDemoButton" type="button">Reset demo</button>
         </aside>
 
         <section class="canvas">
@@ -51,7 +42,11 @@
             <form class="outfit-card" id="outfitForm">
               <label class="photo-drop outfit-drop" for="outfitImage">
                 <input id="outfitImage" name="image" type="file" accept="image/*" capture="environment" />
-                <span class="photo-preview" id="outfitPreview">today.jpg</span>
+                <span
+                  class="photo-preview has-image"
+                  id="outfitPreview"
+                  style="background-image: url('/assets/demo/silver-mini-dress.jpg')"
+                >today.jpg</span>
               </label>
               <div class="detected-panel">
                 <div>

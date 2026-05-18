@@ -168,45 +168,6 @@ label {
   background: var(--pink);
 }
 
-.swatches {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  padding: 10px;
-  border: 2px solid var(--line);
-  background: white;
-}
-
-.swatch {
-  aspect-ratio: 1;
-  border: 2px solid var(--line);
-}
-
-.swatch.black {
-  background: var(--ink);
-}
-
-.swatch.pink {
-  background: var(--pink);
-}
-
-.swatch.yellow {
-  background: var(--yellow);
-}
-
-.swatch.blue {
-  background: var(--blue);
-}
-
-.swatch.mint {
-  background: var(--mint);
-}
-
-.swatch.red {
-  background: var(--red);
-}
-
-.text-button,
 .primary-button,
 .filter-bar button,
 .item-actions button,
@@ -226,12 +187,7 @@ label {
   background: var(--yellow);
 }
 
-.text-button {
-  background: var(--blue);
-}
-
 .primary-button:hover,
-.text-button:hover,
 .filter-bar button:hover,
 .item-actions button:hover,
 .status-button:hover {
@@ -702,10 +658,6 @@ a:focus-visible {
 
   .app-frame {
     min-height: auto;
-  }
-
-  .swatches {
-    grid-template-columns: repeat(6, 1fr);
   }
 
   .closet-grid {

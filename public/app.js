@@ -1,4 +1,5 @@
 const CATEGORIES = ["All", "Tops", "Bottoms", "Dresses", "Outerwear", "Shoes", "Bags", "Accessories"];
+const DEFAULT_OUTFIT_IMAGE = "/assets/demo/silver-mini-dress.jpg";
 
 let state = { items: [], shopping: [], outfits: [], friends: [] };
 let selectedCategory = "All";
@@ -24,8 +25,7 @@ const els = {
   closetCardTemplate: document.querySelector("#closetCardTemplate"),
   shoppingForm: document.querySelector("#shoppingForm"),
   shoppingList: document.querySelector("#shoppingList"),
-  friendFeed: document.querySelector("#friendFeed"),
-  seedDemoButton: document.querySelector("#seedDemoButton")
+  friendFeed: document.querySelector("#friendFeed")
 };
 
 function formatMoney(value) {
@@ -212,16 +212,21 @@ function renderFriends() {
   }
 
   els.friendFeed.innerHTML = state.friends
-    .map((friend) => `
+    .map((friend) => {
+      const photoStyle = friend.image
+        ? `background-image: url('${escapeHtml(friend.image)}')`
+        : `background: ${escapeHtml(friend.color || "#d9daf8")}`;
+      return `
       <article class="friend-card">
-        <div class="friend-photo" style="background: ${escapeHtml(friend.color || "#d9daf8")}"></div>
+        <div class="friend-photo" style="${photoStyle}"></div>
         <div>
           <strong>${escapeHtml(friend.name)}</strong>
           <p class="meta">${escapeHtml(friend.activity)}</p>
           <div class="chip-row">${(friend.tags || []).map((tag, index) => `<span class="chip chip-${(index % 6) + 1}">${escapeHtml(tag)}</span>`).join("")}</div>
         </div>
       </article>
-    `)
+    `;
+    })
     .join("");
 }
 
@@ -285,7 +290,7 @@ els.outfitForm.addEventListener("submit", async (event) => {
   await api("/api/outfits", {
     method: "POST",
     body: JSON.stringify({
-      image: pendingOutfitImage,
+      image: pendingOutfitImage || DEFAULT_OUTFIT_IMAGE,
       occasion: form.get("occasion"),
       notes: form.get("notes"),
       detectedTags
@@ -294,7 +299,7 @@ els.outfitForm.addEventListener("submit", async (event) => {
   formElement.reset();
   pendingOutfitImage = "";
   detectedTags = [];
-  setPreview(els.outfitPreview, "");
+  setPreview(els.outfitPreview, DEFAULT_OUTFIT_IMAGE);
   await loadState();
 });
 
@@ -379,19 +384,6 @@ els.shoppingList.addEventListener("click", async (event) => {
   }
 
   await loadState();
-});
-
-els.seedDemoButton.addEventListener("click", async () => {
-  state = await api("/api/reset", { method: "POST", body: JSON.stringify({}) });
-  pendingItemImage = "";
-  pendingOutfitImage = "";
-  detectedTags = [];
-  els.itemForm.reset();
-  els.outfitForm.reset();
-  els.shoppingForm.reset();
-  setPreview(els.uploadPreview, "");
-  setPreview(els.outfitPreview, "");
-  render();
 });
 
 loadState().catch((error) => {

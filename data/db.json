@@ -1,178 +1,218 @@
 {
   "items": [
     {
-      "id": "item_yellow_jacket",
-      "name": "Yellow zip jacket",
-      "category": "Outerwear",
-      "colors": [
-        "yellow"
-      ],
-      "season": "Spring",
-      "price": 72,
-      "source": "Closet",
-      "wearCount": 6,
-      "notes": "Bright layer for rainy days.",
-      "image": ""
-    },
-    {
-      "id": "item_pink_skirt",
-      "name": "Pink mini skirt",
-      "category": "Bottoms",
-      "colors": [
-        "pink"
-      ],
-      "season": "Spring",
-      "price": 46,
+      "id": "item_silver_mini",
+      "name": "Silver strapless mini dress",
+      "category": "Dresses",
+      "colors": ["silver", "gray"],
+      "season": "Summer",
+      "price": 138,
       "source": "Closet",
       "wearCount": 4,
-      "notes": "Works with tanks, sweaters, and platforms.",
-      "image": ""
+      "notes": "Night-out dress with gold heels and a small clutch.",
+      "image": "/assets/demo/silver-mini-dress.jpg"
     },
     {
-      "id": "item_white_tank",
-      "name": "White ribbed tank",
-      "category": "Tops",
-      "colors": [
-        "white"
-      ],
-      "season": "Summer",
-      "price": 22,
-      "source": "Closet",
-      "wearCount": 18,
-      "notes": "Layering base.",
-      "image": ""
-    },
-    {
-      "id": "item_denim",
-      "name": "Straight-leg denim",
+      "id": "item_striped_skirt",
+      "name": "Sunset stripe mini skirt",
       "category": "Bottoms",
-      "colors": [
-        "denim",
-        "blue"
-      ],
-      "season": "All year",
-      "price": 64,
+      "colors": ["pink", "yellow", "brown"],
+      "season": "Summer",
+      "price": 72,
       "source": "Closet",
-      "wearCount": 21,
-      "notes": "Default campus piece.",
-      "image": ""
+      "wearCount": 5,
+      "notes": "Best with a fitted black top and low heels.",
+      "image": "/assets/demo/striped-mini-skirt.jpg"
     },
     {
-      "id": "item_black_bag",
-      "name": "Black shoulder bag",
-      "category": "Bags",
-      "colors": [
-        "black"
-      ],
+      "id": "item_black_boatneck",
+      "name": "Black boatneck top",
+      "category": "Tops",
+      "colors": ["black"],
       "season": "All year",
-      "price": 96,
-      "source": "Closet",
-      "wearCount": 11,
-      "notes": "Small but fits essentials.",
-      "image": ""
-    },
-    {
-      "id": "item_brown_boots",
-      "name": "Brown ankle boots",
-      "category": "Shoes",
-      "colors": [
-        "brown"
-      ],
-      "season": "Fall",
-      "price": 130,
+      "price": 54,
       "source": "Closet",
       "wearCount": 9,
-      "notes": "Good with denim and skirts.",
-      "image": ""
+      "notes": "Clean long sleeve top for short skirts.",
+      "image": "/assets/demo/striped-mini-skirt.jpg"
+    },
+    {
+      "id": "item_blue_midi",
+      "name": "Cobalt blue midi skirt",
+      "category": "Bottoms",
+      "colors": ["blue"],
+      "season": "Spring",
+      "price": 86,
+      "source": "Closet",
+      "wearCount": 6,
+      "notes": "Coffee-run skirt with a pale fitted top.",
+      "image": "/assets/demo/blue-skirt-coffee.jpg"
+    },
+    {
+      "id": "item_sky_satin_set",
+      "name": "Sky blue satin set",
+      "category": "Dresses",
+      "colors": ["blue", "silver"],
+      "season": "Spring",
+      "price": 124,
+      "source": "Closet",
+      "wearCount": 2,
+      "notes": "Soft blue two-piece for dinners.",
+      "image": "/assets/demo/blue-satin-set.jpg"
+    },
+    {
+      "id": "item_yellow_shorts",
+      "name": "Lemon yellow micro shorts",
+      "category": "Bottoms",
+      "colors": ["yellow"],
+      "season": "Summer",
+      "price": 48,
+      "source": "Closet",
+      "wearCount": 7,
+      "notes": "Travel shorts with a white henley and flip-flops.",
+      "image": "/assets/demo/yellow-shorts-street.jpg"
+    },
+    {
+      "id": "item_cream_mini",
+      "name": "Ivory eyelet mini dress",
+      "category": "Dresses",
+      "colors": ["ivory", "cream"],
+      "season": "Summer",
+      "price": 118,
+      "source": "Closet",
+      "wearCount": 5,
+      "notes": "Warm-weather dress for dinners and trips.",
+      "image": "/assets/demo/cream-mini-dress.jpeg"
+    },
+    {
+      "id": "item_black_floral",
+      "name": "Black rose slip dress",
+      "category": "Dresses",
+      "colors": ["black", "red"],
+      "season": "All year",
+      "price": 92,
+      "source": "Closet",
+      "wearCount": 3,
+      "notes": "Good with boots or a cardigan.",
+      "image": "/assets/demo/black-floral-dress.jpg"
+    },
+    {
+      "id": "item_cream_knit",
+      "name": "Cream tie-front knit top",
+      "category": "Tops",
+      "colors": ["cream", "black"],
+      "season": "Spring",
+      "price": 64,
+      "source": "Closet",
+      "wearCount": 7,
+      "notes": "Pairs with loose denim and simple sandals.",
+      "image": "/assets/demo/cream-knit-top.jpeg"
     }
   ],
   "shopping": [
     {
-      "id": "shop_silver_flats",
-      "name": "Silver flats",
-      "category": "Shoes",
-      "price": 88,
-      "plannedWears": 12,
-      "reason": "Dressy walking shoe for presentations.",
-      "status": "watch"
-    },
-    {
-      "id": "shop_red_sweater",
-      "name": "Red sweater",
-      "category": "Tops",
-      "price": 74,
-      "plannedWears": 9,
-      "reason": "Bought for color rotation.",
+      "id": "shop_leopard_clutch",
+      "name": "Leopard mini clutch",
+      "category": "Bags",
+      "price": 48,
+      "plannedWears": 8,
+      "reason": "Bought for the silver mini dress outfit.",
       "status": "bought"
     },
     {
-      "id": "shop_green_bag",
-      "name": "Green mini bag",
-      "category": "Bags",
-      "price": 62,
-      "plannedWears": 8,
-      "reason": "Saved from friend's outfit.",
+      "id": "shop_gold_slingbacks",
+      "name": "Gold slingback heels",
+      "category": "Shoes",
+      "price": 96,
+      "plannedWears": 10,
+      "reason": "Would work with the silver mini and ivory eyelet dress.",
       "status": "watch"
+    },
+    {
+      "id": "shop_pink_check_tote",
+      "name": "Pink check tote",
+      "category": "Bags",
+      "price": 52,
+      "plannedWears": 9,
+      "reason": "Saved for the lemon shorts travel look.",
+      "status": "watch"
+    },
+    {
+      "id": "shop_rosette_clip",
+      "name": "Red rosette hair clip",
+      "category": "Accessories",
+      "price": 24,
+      "plannedWears": 8,
+      "reason": "Bought to pull red from the black floral dress.",
+      "status": "bought"
     }
   ],
   "outfits": [
     {
       "id": "fit_monday",
       "date": "May 17",
-      "occasion": "Class",
-      "notes": "Yellow jacket, pink skirt, white tank.",
-      "detectedTags": [
-        "yellow zip jacket",
-        "pink mini skirt",
-        "white tank"
-      ],
-      "image": ""
+      "occasion": "Dinner",
+      "notes": "Silver mini dress, leopard clutch, gold heels.",
+      "detectedTags": ["silver mini dress", "leopard clutch", "gold heels"],
+      "image": "/assets/demo/silver-mini-dress.jpg"
     },
     {
       "id": "fit_sunday",
       "date": "May 16",
+      "occasion": "City walk",
+      "notes": "Black boatneck top with the sunset stripe mini skirt.",
+      "detectedTags": ["black boatneck top", "striped mini skirt", "cream heels"],
+      "image": "/assets/demo/striped-mini-skirt.jpg"
+    },
+    {
+      "id": "fit_friday",
+      "date": "May 15",
       "occasion": "Coffee",
-      "notes": "Denim and black bag repeat.",
-      "detectedTags": [
-        "denim",
-        "black shoulder bag"
-      ],
-      "image": ""
+      "notes": "Pale fitted top, cobalt midi skirt, shoulder bag.",
+      "detectedTags": ["pale fitted top", "cobalt midi skirt", "logo bag"],
+      "image": "/assets/demo/blue-skirt-coffee.jpg"
+    },
+    {
+      "id": "fit_thursday",
+      "date": "May 14",
+      "occasion": "Travel day",
+      "notes": "White henley, lemon shorts, pink check tote.",
+      "detectedTags": ["white henley", "lemon shorts", "pink tote"],
+      "image": "/assets/demo/yellow-shorts-street.jpg"
     }
   ],
   "friends": [
     {
       "id": "friend_maya",
       "name": "Maya",
-      "activity": "Wore silver flats with a white skirt and saved a red bag.",
-      "tags": [
-        "flats",
-        "white",
-        "red bag"
-      ],
-      "color": "#f49ac2"
+      "activity": "Logged a sky blue satin set with pale pink pumps.",
+      "tags": ["blue satin set", "pink pumps", "dinner"],
+      "color": "#f49ac2",
+      "image": "/assets/demo/blue-satin-set.jpg"
     },
     {
       "id": "friend_lena",
       "name": "Lena",
-      "activity": "Bought a green shoulder bag after borrowing one twice.",
-      "tags": [
-        "purchase",
-        "green",
-        "bag"
-      ],
-      "color": "#c9ecd8"
+      "activity": "Wore a pink polka column dress and saved gold sandals.",
+      "tags": ["pink dress", "sandals", "wishlist"],
+      "color": "#c9ecd8",
+      "image": "/assets/demo/pink-polka-dress.jpeg"
     },
     {
       "id": "friend_jules",
       "name": "Jules",
-      "activity": "Logged a campus outfit: denim, yellow knit, black sunglasses.",
-      "tags": [
-        "denim",
-        "yellow",
-        "sunglasses"
-      ],
-      "color": "#fff08a"
+      "activity": "Bought a red hair clip for a black rose slip dress.",
+      "tags": ["purchase", "red", "floral"],
+      "color": "#fff08a",
+      "image": "/assets/demo/black-floral-dress.jpg"
+    },
+    {
+      "id": "friend_noor",
+      "name": "Noor",
+      "activity": "Repeated the cream tie-front knit with loose denim.",
+      "tags": ["cream knit", "denim", "repeat"],
+      "color": "#dceff6",
+      "image": "/assets/demo/cream-knit-top.jpeg"
     }
   ]
 }
