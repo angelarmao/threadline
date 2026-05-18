@@ -18,7 +18,7 @@ Next I plan to add outfit planning, stronger recommendation logic for whether a 
 
 ## Q5 Github Link
 
-Paste the GitHub repository URL here after publishing.
+https://github.com/angelarmao/threadline
 
 ## Q6 Compute
 
