@@ -152,8 +152,8 @@
       "id": "fit_monday",
       "date": "May 17",
       "occasion": "Dinner",
-      "notes": "Silver mini dress, leopard clutch, gold heels.",
-      "detectedTags": ["silver mini dress", "leopard clutch", "gold heels"],
+      "notes": "Silver mini dress, gold heels, hoop earrings, leopard clutch.",
+      "detectedTags": ["silver dress", "gold heels", "hoop earrings", "leopard clutch"],
       "image": "/assets/demo/silver-mini-dress.jpg"
     },
     {

@@ -2,6 +2,8 @@
 
 Threadline is a closet memory and purchase tracking prototype. The core loop is simple: log what you wore today, keep your closet organized, track purchases and wishlist items, and glance at friend activity for style context.
 
+![Threadline app screenshot](docs/threadline-home.png)
+
 ## Product Focus
 
 The app is intentionally tighter than a general fashion dashboard. It focuses on four surfaces:
@@ -56,7 +58,3 @@ threadline/
     styles.css
   server.js
 ```
-
-## Next Features
-
-See `docs/ROADMAP.md` for the two-week plan and `docs/DECISIONS_FOR_ANGELA.md` for product and UI decisions.

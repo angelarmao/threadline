@@ -1,5 +1,6 @@
 const CATEGORIES = ["All", "Tops", "Bottoms", "Dresses", "Outerwear", "Shoes", "Bags", "Accessories"];
 const DEFAULT_OUTFIT_IMAGE = "/assets/demo/silver-mini-dress.jpg";
+const DEFAULT_DETECTED_TAGS = ["silver dress", "gold heels", "hoop earrings", "leopard clutch"];
 
 let state = { items: [], shopping: [], outfits: [], friends: [] };
 let selectedCategory = "All";
@@ -98,11 +99,7 @@ function getMonthSpend() {
 }
 
 function inferTags() {
-  const matches = state.items
-    .slice(0, 4)
-    .map((item) => item.name.toLowerCase().replace(/^straight-leg /, "").replace(/^white ribbed /, "white "))
-    .filter(Boolean);
-  return matches.length ? [...matches, "needs review"].slice(0, 5) : ["top match", "bottom match", "shoe match"];
+  return DEFAULT_DETECTED_TAGS;
 }
 
 function renderChips(container, tags) {
