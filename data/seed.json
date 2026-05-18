@@ -1,31 +1,31 @@
 {
   "items": [
     {
-      "id": "item_blazer",
-      "name": "Black blazer",
+      "id": "item_yellow_jacket",
+      "name": "Yellow zip jacket",
       "category": "Outerwear",
-      "colors": ["black"],
-      "season": "Fall",
-      "price": 88,
+      "colors": ["yellow"],
+      "season": "Spring",
+      "price": 72,
       "source": "Closet",
-      "wearCount": 14,
-      "notes": "Works for class presentations and dinners.",
+      "wearCount": 6,
+      "notes": "Bright layer for rainy days.",
       "image": ""
     },
     {
-      "id": "item_denim",
-      "name": "Straight-leg denim",
+      "id": "item_pink_skirt",
+      "name": "Pink mini skirt",
       "category": "Bottoms",
-      "colors": ["blue"],
-      "season": "All year",
-      "price": 64,
+      "colors": ["pink"],
+      "season": "Spring",
+      "price": 46,
       "source": "Closet",
-      "wearCount": 21,
-      "notes": "Default campus piece.",
+      "wearCount": 4,
+      "notes": "Works with tanks, sweaters, and platforms.",
       "image": ""
     },
     {
-      "id": "item_tank",
+      "id": "item_white_tank",
       "name": "White ribbed tank",
       "category": "Tops",
       "colors": ["white"],
@@ -37,7 +37,31 @@
       "image": ""
     },
     {
-      "id": "item_boots",
+      "id": "item_denim",
+      "name": "Straight-leg denim",
+      "category": "Bottoms",
+      "colors": ["denim", "blue"],
+      "season": "All year",
+      "price": 64,
+      "source": "Closet",
+      "wearCount": 21,
+      "notes": "Default campus piece.",
+      "image": ""
+    },
+    {
+      "id": "item_black_bag",
+      "name": "Black shoulder bag",
+      "category": "Bags",
+      "colors": ["black"],
+      "season": "All year",
+      "price": 96,
+      "source": "Closet",
+      "wearCount": 11,
+      "notes": "Small but fits essentials.",
+      "image": ""
+    },
+    {
+      "id": "item_brown_boots",
       "name": "Brown ankle boots",
       "category": "Shoes",
       "colors": ["brown"],
@@ -45,29 +69,78 @@
       "price": 130,
       "source": "Closet",
       "wearCount": 9,
-      "notes": "Great, but less useful in rain.",
+      "notes": "Good with denim and skirts.",
       "image": ""
     }
   ],
   "shopping": [
+    {
+      "id": "shop_silver_flats",
+      "name": "Silver flats",
+      "category": "Shoes",
+      "price": 88,
+      "plannedWears": 12,
+      "reason": "Dressy walking shoe for presentations.",
+      "status": "watch"
+    },
     {
       "id": "shop_red_sweater",
       "name": "Red sweater",
       "category": "Tops",
       "price": 74,
       "plannedWears": 9,
-      "reason": "Color pop for denim and black blazer.",
-      "status": "watch"
+      "reason": "Bought for color rotation.",
+      "status": "bought"
     },
     {
-      "id": "shop_rain_shoe",
-      "name": "Waterproof walking shoe",
-      "category": "Shoes",
-      "price": 112,
-      "plannedWears": 18,
-      "reason": "Campus rain gap.",
-      "status": "candidate"
+      "id": "shop_green_bag",
+      "name": "Green mini bag",
+      "category": "Bags",
+      "price": 62,
+      "plannedWears": 8,
+      "reason": "Saved from friend's outfit.",
+      "status": "watch"
     }
   ],
-  "outfits": []
+  "outfits": [
+    {
+      "id": "fit_monday",
+      "date": "May 17",
+      "occasion": "Class",
+      "notes": "Yellow jacket, pink skirt, white tank.",
+      "detectedTags": ["yellow zip jacket", "pink mini skirt", "white tank"],
+      "image": ""
+    },
+    {
+      "id": "fit_sunday",
+      "date": "May 16",
+      "occasion": "Coffee",
+      "notes": "Denim and black bag repeat.",
+      "detectedTags": ["denim", "black shoulder bag"],
+      "image": ""
+    }
+  ],
+  "friends": [
+    {
+      "id": "friend_maya",
+      "name": "Maya",
+      "activity": "Wore silver flats with a white skirt and saved a red bag.",
+      "tags": ["flats", "white", "red bag"],
+      "color": "#f49ac2"
+    },
+    {
+      "id": "friend_lena",
+      "name": "Lena",
+      "activity": "Bought a green shoulder bag after borrowing one twice.",
+      "tags": ["purchase", "green", "bag"],
+      "color": "#c9ecd8"
+    },
+    {
+      "id": "friend_jules",
+      "name": "Jules",
+      "activity": "Logged a campus outfit: denim, yellow knit, black sunglasses.",
+      "tags": ["denim", "yellow", "sunglasses"],
+      "color": "#fff08a"
+    }
+  ]
 }

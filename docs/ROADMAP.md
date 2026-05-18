@@ -2,57 +2,56 @@
 
 ## Current State
 
-Threadline now has a working local prototype with a responsive front-end, a Node.js backend, persistent JSON data, closet item creation, photo upload/camera capture, closet filtering, wear logging, shopping queue management, gap radar, and cost-per-wear decision hints.
+Threadline now has a working local prototype with a retro fashion-board interface, a Node.js backend, JSON persistence, daily outfit uploads, prototype recognition chips, closet item creation, purchase/wishlist tracking, and a sample friends feed.
 
 ## Week 1
 
 ### Day 1
 
-Finalize product angle and UI direction. Decide whether the project is primarily about shopping restraint, closet organization, sustainability, or outfit planning.
+Validate the tighter concept: daily outfit memory plus closet and purchases. Remove anything that does not support that loop.
 
 ### Day 2
 
-Add outfit planning data model and UI. Let a user choose 2-4 closet items and save an outfit with occasion, season, and notes.
+Make recognition editable. After a user uploads an outfit, let them confirm which closet pieces were detected and correct the chips.
 
 ### Day 3
 
-Improve decision logic. Compare shopping ideas against owned categories, colors, and planned outfits so the app can explain "buy," "wait," or "style existing items."
+Connect outfit logs to closet items. When an outfit is saved, increment wear counts for the selected pieces.
 
 ### Day 4
 
-Add edit flows for closet items and shopping ideas. This turns the prototype from a demo into something testable.
+Improve purchase tracking. Add purchase date, store/link, wishlist versus bought filters, and a small monthly spend summary.
 
 ### Day 5
 
-Prepare a demo dataset with 12-20 closet pieces and 5-8 shopping ideas. The demo should make the novelty obvious in under one minute.
+Create a strong demo dataset with real or approved sample closet images, outfit logs, purchases, and friend activity.
 
 ## Week 2
 
 ### Day 6
 
-Add a lightweight user testing script and run 2-3 tests with classmates or friends. Focus on whether the app helps people make shopping decisions.
+Run 2-3 user tests. Watch whether users understand the daily upload flow and whether purchase tracking feels worth returning to.
 
 ### Day 7
 
-Revise UI based on testing. Tighten labels, remove confusing controls, and make the core workflow faster.
+Polish the interface from test feedback. Tighten spacing, empty states, card hierarchy, and mobile camera capture.
 
 ### Day 8
 
-Add a simple insights page: most worn item, least worn item, best cost-per-wear, unused shopping ideas, and biggest closet gap.
+Prototype friend privacy controls. Decide whether friends can see outfits, purchases, wishlist items, or only selected posts.
 
 ### Day 9
 
-Polish mobile behavior. Test photo capture on a phone, improve small-screen layout, and check that text does not overflow.
+Add a simple insight view: most reworn pieces, recently bought but unworn items, and outfit streak.
 
 ### Day 10
 
-Finalize README, milestone answers, screenshots, and presentation/demo notes.
+Finalize README, milestone answers, screenshots, and a concise demo script.
 
 ## Stretch Goals
 
-- Batch photo upload.
-- Live camera capture with `getUserMedia`.
-- Automatic color/category tagging.
-- Budget cap for shopping queue.
-- Browser local storage fallback for offline demo.
-- Hosted deployment on Render, Railway, or Vercel with a small database.
+- Computer vision API for category/color recognition.
+- Batch upload of closet pieces.
+- Receipt parsing from screenshots.
+- Friend groups and privacy settings.
+- Hosted deployment with a small database.

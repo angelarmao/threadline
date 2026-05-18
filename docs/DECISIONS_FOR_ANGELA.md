@@ -4,9 +4,9 @@ These are the choices I need from you before the final two-week build sprint.
 
 ## 1. Product Angle
 
-Recommended: closet and shopping decision system.
+Recommended: daily outfit memory plus closet and purchase tracking.
 
-This keeps the project more novel than a normal digital closet because the app answers: "Should I buy this, or can I style what I already own?"
+This keeps the project more novel than a normal digital closet because the app captures the daily behavior loop: what you wore, what you own, what you bought, and what your friends are wearing.
 
 Other viable angles:
 
@@ -23,14 +23,14 @@ The current prototype uses an image file input with `accept=image/*` and `captur
 Later upgrade:
 
 - Add live webcam capture with `getUserMedia`.
-- Add background removal or automatic tags.
+- Add editable auto-recognition chips.
 - Add batch upload for many closet photos.
 
 ## 3. UI Direction
 
-Recommended current direction: "editorial closet cockpit."
+Recommended current direction: retro fashion desktop.
 
-It feels like a clean productivity app for wardrobe decisions: inventory, metrics, and decision cards.
+It feels like a playful mix of MS Paint, fashion collages, closet boards, and tiny desktop windows.
 
 Alternatives I can switch to:
 
@@ -42,40 +42,39 @@ Alternatives I can switch to:
 
 Recommended milestone scope:
 
-- Add closet item with photo, category, colors, price, wears, and notes.
-- Closet grid with filters.
-- Wear logging.
-- Shopping queue with price and planned wears.
-- Cost-per-wear and buy/wait/style-first decision hints.
-- Gap radar based on closet categories.
+- Daily outfit upload.
+- Prototype recognition chips.
+- Closet board with filters.
+- Purchase and wishlist tracker.
+- Friends feed demo.
 
 Defer:
 
 - Account login.
 - Real retailer integrations.
-- AI styling.
-- Computer vision auto-tagging.
+- Full computer vision.
+- Friend privacy settings.
 - Cloud sync.
 
 ## 5. Novelty Claim
 
 Recommended claim:
 
-Threadline is not just a digital closet. It connects owned items to future shopping decisions, helping users avoid redundant purchases by showing closet gaps, category saturation, and cost-per-wear tradeoffs.
+Threadline is not just a digital closet. It turns getting dressed into a memory system by connecting daily outfit photos, owned clothes, purchase history, and friend inspiration.
 
 ## 6. Data Model
 
 Recommended:
 
 - `items`: closet pieces.
-- `shopping`: possible purchases.
-- `outfits`: planned combinations, added next.
-- `events`: future wear history, added if time allows.
+- `shopping`: purchases and wishlist items.
+- `outfits`: daily outfit logs.
+- `friends`: sample social activity, later replaced by real accounts.
 
 ## 7. Questions to Answer
 
-- Do you want the app to feel more like a fashion tool, a budgeting tool, or a sustainability tool?
+- Should the final product feel more playful like a fashion desktop, or cleaner like a closet archive?
+- Should friends see purchases by default, or only outfits you choose to post?
 - Should the final demo use your real closet photos, sample photos, or generated placeholder data?
-- Should outfit planning be visual drag-and-drop, or a simpler form that combines existing pieces?
-- Do you want to target college students specifically, or broader shoppers?
-- What are 2-3 apps or sites whose UI you like?
+- Is the primary user college students, fashion hobbyists, or people trying to buy less?
+- What is the one daily habit we most want the app to support?

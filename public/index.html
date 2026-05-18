@@ -7,94 +7,159 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Primary">
-        <a class="brand" href="#dashboard" aria-label="Threadline dashboard">
-          <span class="brand-mark">TL</span>
-          <span>
+    <div class="desktop">
+      <header class="window-bar" aria-label="Threadline window">
+        <div class="traffic-lights" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="window-title">threadline_wardrobe.image</div>
+        <div class="window-tools" aria-hidden="true">□  ◇  +</div>
+      </header>
+
+      <main class="app-frame">
+        <aside class="toolbox" aria-label="Primary">
+          <a class="brand" href="#today" aria-label="Threadline">
+            <span class="brand-icon">T</span>
             <strong>Threadline</strong>
-            <small>closet loop</small>
-          </span>
-        </a>
-        <nav class="nav">
-          <a href="#dashboard" class="active">Dashboard</a>
-          <a href="#add-item">Add Item</a>
-          <a href="#closet">Closet</a>
-          <a href="#shopping">Shopping</a>
-        </nav>
-      </aside>
-
-      <main class="workspace">
-        <header class="topbar" id="dashboard">
-          <div>
-            <p class="eyebrow">CS153 milestone prototype</p>
-            <h1>Closet decisions, not just closet storage.</h1>
+          </a>
+          <nav class="tool-nav">
+            <a class="active" href="#today">Today</a>
+            <a href="#closet">Closet</a>
+            <a href="#purchases">Purchases</a>
+            <a href="#friends">Friends</a>
+          </nav>
+          <div class="swatches" aria-label="Palette">
+            <span class="swatch black"></span>
+            <span class="swatch pink"></span>
+            <span class="swatch yellow"></span>
+            <span class="swatch blue"></span>
+            <span class="swatch mint"></span>
+            <span class="swatch red"></span>
           </div>
-          <div class="top-actions">
-            <button class="ghost-button" id="seedDemoButton" type="button">Reset demo data</button>
-            <a class="primary-button" href="#add-item">Add piece</a>
-          </div>
-        </header>
+          <button class="text-button" id="seedDemoButton" type="button">Reset demo</button>
+        </aside>
 
-        <section class="metrics-grid" aria-label="Closet summary">
-          <article class="metric-panel">
-            <span class="metric-label">Closet pieces</span>
-            <strong id="itemCount">0</strong>
-          </article>
-          <article class="metric-panel">
-            <span class="metric-label">Logged wears</span>
-            <strong id="wearCount">0</strong>
-          </article>
-          <article class="metric-panel">
-            <span class="metric-label">Avg. cost per wear</span>
-            <strong id="avgCostPerWear">$0</strong>
-          </article>
-          <article class="metric-panel accent">
-            <span class="metric-label">Shopping ideas</span>
-            <strong id="shoppingCount">0</strong>
-          </article>
-        </section>
-
-        <section class="dashboard-grid">
-          <section class="panel" aria-labelledby="gapHeading">
-            <div class="panel-heading">
-              <div>
-                <p class="eyebrow">Gap radar</p>
-                <h2 id="gapHeading">Where the closet is thin</h2>
-              </div>
+        <section class="canvas">
+          <section class="hero-board" id="today" aria-labelledby="todayHeading">
+            <div class="hero-copy">
+              <p class="kicker">Daily fit check</p>
+              <h1 id="todayHeading">Log what you wore before it disappears into the week.</h1>
             </div>
-            <div class="gap-list" id="gapList"></div>
+
+            <form class="outfit-card" id="outfitForm">
+              <label class="photo-drop outfit-drop" for="outfitImage">
+                <input id="outfitImage" name="image" type="file" accept="image/*" capture="environment" />
+                <span class="photo-preview" id="outfitPreview">today.jpg</span>
+              </label>
+              <div class="detected-panel">
+                <div>
+                  <p class="kicker">Auto-recognized draft</p>
+                  <div class="chip-row" id="detectedChips"></div>
+                </div>
+                <label>
+                  <span>Occasion</span>
+                  <input name="occasion" placeholder="Class, dinner, errands" />
+                </label>
+                <label>
+                  <span>Note</span>
+                  <input name="notes" placeholder="Comfortable, repeat with boots" />
+                </label>
+                <button class="primary-button" type="submit">Log outfit</button>
+              </div>
+            </form>
           </section>
 
-          <section class="panel" aria-labelledby="decisionHeading">
-            <div class="panel-heading">
-              <div>
-                <p class="eyebrow">Buy, wait, or restyle</p>
-                <h2 id="decisionHeading">Shopping decisions</h2>
-              </div>
-            </div>
-            <div class="decision-list" id="decisionList"></div>
+          <section class="stats-strip" aria-label="Wardrobe summary">
+            <article>
+              <span>Closet</span>
+              <strong id="itemCount">0</strong>
+            </article>
+            <article>
+              <span>Outfit logs</span>
+              <strong id="outfitCount">0</strong>
+            </article>
+            <article>
+              <span>Purchases</span>
+              <strong id="purchaseCount">0</strong>
+            </article>
+            <article>
+              <span>This month</span>
+              <strong id="monthSpend">$0</strong>
+            </article>
           </section>
-        </section>
 
-        <section class="panel intake-panel" id="add-item" aria-labelledby="addHeading">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Photo intake</p>
-              <h2 id="addHeading">Add a closet piece</h2>
+          <section class="two-up">
+            <section class="panel" aria-labelledby="logHeading">
+              <div class="panel-head">
+                <p class="kicker">Outfit history</p>
+                <h2 id="logHeading">Recent logs</h2>
+              </div>
+              <div class="outfit-log" id="outfitLog"></div>
+            </section>
+
+            <section class="panel" aria-labelledby="addHeading">
+              <div class="panel-head">
+                <p class="kicker">Closet intake</p>
+                <h2 id="addHeading">Add one piece</h2>
+              </div>
+              <form class="item-form" id="itemForm">
+                <label class="photo-drop" for="itemImage">
+                  <input id="itemImage" name="image" type="file" accept="image/*" capture="environment" />
+                  <span class="photo-preview small" id="uploadPreview">piece.jpg</span>
+                </label>
+                <div class="form-grid">
+                  <label>
+                    <span>Name</span>
+                    <input name="name" required placeholder="Pink mini skirt" />
+                  </label>
+                  <label>
+                    <span>Category</span>
+                    <select name="category">
+                      <option>Tops</option>
+                      <option>Bottoms</option>
+                      <option>Dresses</option>
+                      <option>Outerwear</option>
+                      <option>Shoes</option>
+                      <option>Bags</option>
+                      <option>Accessories</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Colors</span>
+                    <input name="colors" placeholder="pink, yellow" />
+                  </label>
+                  <label>
+                    <span>Price</span>
+                    <input name="price" type="number" min="0" step="1" placeholder="58" />
+                  </label>
+                  <button class="primary-button" type="submit">Save piece</button>
+                </div>
+              </form>
+            </section>
+          </section>
+
+          <section class="panel" id="closet" aria-labelledby="closetHeading">
+            <div class="panel-head inline">
+              <div>
+                <p class="kicker">Inventory</p>
+                <h2 id="closetHeading">Closet board</h2>
+              </div>
+              <div class="filter-bar" id="categoryFilters"></div>
             </div>
-          </div>
+            <div class="closet-grid" id="closetGrid"></div>
+          </section>
 
-          <form class="item-form" id="itemForm">
-            <label class="drop-zone" for="itemImage">
-              <input id="itemImage" name="image" type="file" accept="image/*" capture="environment" />
-              <span class="upload-preview" id="uploadPreview">Photo</span>
-            </label>
-
-            <div class="form-grid">
+          <section class="panel" id="purchases" aria-labelledby="purchaseHeading">
+            <div class="panel-head">
+              <p class="kicker">Receipts and wishlists</p>
+              <h2 id="purchaseHeading">Purchase tracker</h2>
+            </div>
+            <form class="purchase-form" id="shoppingForm">
               <label>
-                <span>Name</span>
-                <input name="name" required placeholder="Black slip skirt" />
+                <span>Item</span>
+                <input name="name" required placeholder="Silver flats" />
               </label>
               <label>
                 <span>Category</span>
@@ -104,93 +169,33 @@
                   <option>Dresses</option>
                   <option>Outerwear</option>
                   <option>Shoes</option>
+                  <option>Bags</option>
                   <option>Accessories</option>
-                  <option>Other</option>
-                </select>
-              </label>
-              <label>
-                <span>Colors</span>
-                <input name="colors" placeholder="black, ivory" />
-              </label>
-              <label>
-                <span>Season</span>
-                <select name="season">
-                  <option>All year</option>
-                  <option>Spring</option>
-                  <option>Summer</option>
-                  <option>Fall</option>
-                  <option>Winter</option>
                 </select>
               </label>
               <label>
                 <span>Price</span>
-                <input name="price" type="number" min="0" step="1" placeholder="58" />
+                <input name="price" type="number" min="0" step="1" placeholder="80" />
               </label>
               <label>
-                <span>Wears</span>
-                <input name="wearCount" type="number" min="0" step="1" value="0" />
+                <span>Status</span>
+                <select name="status">
+                  <option value="bought">Bought</option>
+                  <option value="watch">Wishlist</option>
+                </select>
               </label>
-              <label class="wide">
-                <span>Notes</span>
-                <input name="notes" placeholder="Works with denim, blazer, and tall boots" />
-              </label>
+              <button class="primary-button" type="submit">Track</button>
+            </form>
+            <div class="purchase-list" id="shoppingList"></div>
+          </section>
+
+          <section class="panel" id="friends" aria-labelledby="friendsHeading">
+            <div class="panel-head">
+              <p class="kicker">Friends</p>
+              <h2 id="friendsHeading">What everyone is wearing</h2>
             </div>
-            <button class="primary-button" type="submit">Save item</button>
-          </form>
-        </section>
-
-        <section class="panel" id="closet" aria-labelledby="closetHeading">
-          <div class="panel-heading split">
-            <div>
-              <p class="eyebrow">Inventory</p>
-              <h2 id="closetHeading">Closet</h2>
-            </div>
-            <div class="filter-bar" id="categoryFilters"></div>
-          </div>
-          <div class="closet-grid" id="closetGrid"></div>
-        </section>
-
-        <section class="panel shopping-panel" id="shopping" aria-labelledby="shoppingHeading">
-          <div class="panel-heading">
-            <div>
-              <p class="eyebrow">Purchase queue</p>
-              <h2 id="shoppingHeading">Shopping management</h2>
-            </div>
-          </div>
-
-          <form class="shopping-form" id="shoppingForm">
-            <label>
-              <span>Item</span>
-              <input name="name" required placeholder="Silver flats" />
-            </label>
-            <label>
-              <span>Category</span>
-              <select name="category">
-                <option>Tops</option>
-                <option>Bottoms</option>
-                <option>Dresses</option>
-                <option>Outerwear</option>
-                <option>Shoes</option>
-                <option>Accessories</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>
-              <span>Price</span>
-              <input name="price" type="number" min="0" step="1" placeholder="80" />
-            </label>
-            <label>
-              <span>Planned wears</span>
-              <input name="plannedWears" type="number" min="1" step="1" value="8" />
-            </label>
-            <label class="wide">
-              <span>Reason</span>
-              <input name="reason" placeholder="Fills dressy walking shoe gap" />
-            </label>
-            <button class="primary-button" type="submit">Add to queue</button>
-          </form>
-
-          <div class="shopping-list" id="shoppingList"></div>
+            <div class="friend-feed" id="friendFeed"></div>
+          </section>
         </section>
       </main>
     </div>
@@ -198,15 +203,12 @@
     <template id="closetCardTemplate">
       <article class="closet-card">
         <div class="item-photo"></div>
-        <div class="item-body">
-          <div>
-            <h3></h3>
-            <p class="item-meta"></p>
-          </div>
-          <p class="item-notes"></p>
+        <div class="item-copy">
+          <h3></h3>
+          <p class="item-meta"></p>
           <div class="item-actions">
-            <button type="button" data-action="wear">Log wear</button>
-            <button type="button" data-action="delete">Remove</button>
+            <button type="button" data-action="wear">Wear</button>
+            <button type="button" data-action="delete">Delete</button>
           </div>
         </div>
       </article>

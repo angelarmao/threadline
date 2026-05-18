@@ -100,6 +100,19 @@ function cleanShopping(payload) {
   };
 }
 
+function cleanOutfit(payload) {
+  return {
+    id: payload.id || `fit_${crypto.randomUUID()}`,
+    date: cleanText(payload.date, new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })),
+    occasion: cleanText(payload.occasion, "Everyday"),
+    notes: cleanText(payload.notes),
+    detectedTags: Array.isArray(payload.detectedTags)
+      ? payload.detectedTags.map((tag) => cleanText(tag)).filter(Boolean).slice(0, 8)
+      : [],
+    image: typeof payload.image === "string" && payload.image.startsWith("data:image/") ? payload.image : ""
+  };
+}
+
 async function serveStatic(req, res) {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const requested = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
@@ -172,6 +185,16 @@ async function routeApi(req, res) {
         sendJson(res, 200, removed);
         return;
       }
+    }
+
+    if (req.method === "POST" && url.pathname === "/api/outfits") {
+      const db = await readDb();
+      const outfit = cleanOutfit(await parseJsonBody(req));
+      db.outfits = Array.isArray(db.outfits) ? db.outfits : [];
+      db.outfits.unshift(outfit);
+      await writeDb(db);
+      sendJson(res, 201, outfit);
+      return;
     }
 
     if (req.method === "POST" && url.pathname === "/api/shopping") {
