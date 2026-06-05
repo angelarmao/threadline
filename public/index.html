@@ -25,67 +25,121 @@
             <strong>Threadline</strong>
           </a>
           <nav class="tool-nav">
-            <a class="active" href="#today">Today</a>
-            <a href="#closet">Closet</a>
-            <a href="#purchases">Purchases</a>
-            <a href="#friends">Friends</a>
+            <a class="active" href="#today" data-tab="today">Today</a>
+            <a href="#closet" data-tab="closet">Closet</a>
+            <a href="#outfits" data-tab="outfits">Outfits</a>
+            <a href="#suggestions" data-tab="suggestions">Suggestions</a>
+            <a href="#purchases" data-tab="purchases">Purchases</a>
+            <a href="#friends" data-tab="friends">Friends</a>
           </nav>
         </aside>
 
         <section class="canvas">
-          <section class="hero-board" id="today" aria-labelledby="todayHeading">
-            <div class="hero-copy">
-              <p class="kicker">Daily fit check</p>
-              <h1 id="todayHeading">Log what you wore before it disappears into the week.</h1>
-            </div>
-
-            <form class="outfit-card" id="outfitForm">
-              <label class="photo-drop outfit-drop" for="outfitImage">
-                <input id="outfitImage" name="image" type="file" accept="image/*" capture="environment" />
-                <span
-                  class="photo-preview has-image"
-                  id="outfitPreview"
-                  style="background-image: url('/assets/demo/silver-mini-dress.jpg')"
-                >today.jpg</span>
-              </label>
-              <div class="detected-panel">
-                <div>
-                  <p class="kicker">Auto-recognized draft</p>
-                  <div class="chip-row" id="detectedChips"></div>
-                </div>
-                <label>
-                  <span>Occasion</span>
-                  <input name="occasion" placeholder="Class, dinner, errands" />
-                </label>
-                <label>
-                  <span>Note</span>
-                  <input name="notes" placeholder="Comfortable, repeat with boots" />
-                </label>
-                <button class="primary-button" type="submit">Log outfit</button>
+          <section class="view-section active" id="today" data-view="today" aria-labelledby="todayHeading">
+            <section class="hero-board" aria-labelledby="todayHeading">
+              <div class="hero-copy">
+                <p class="kicker">Daily fit check</p>
+                <h1 id="todayHeading">Log today&apos;s outfit.</h1>
+                <p class="hero-subcopy">Upload a photo, review the recognized pieces, then save it to your outfit history.</p>
               </div>
-            </form>
+
+              <form class="outfit-card" id="outfitForm">
+                <label class="photo-drop outfit-drop" for="outfitImage">
+                  <input id="outfitImage" name="image" type="file" accept="image/*" capture="environment" />
+                  <span class="photo-preview" id="outfitPreview">Upload outfit photo</span>
+                </label>
+                <div class="detected-panel">
+                  <div class="recognition-head">
+                    <div>
+                      <p class="kicker">Recognized outfit</p>
+                      <h2 id="recognitionTitle">Waiting for upload</h2>
+                    </div>
+                    <button class="status-button" type="button" id="analyzeDemoButton">Analyze photo</button>
+                  </div>
+                  <div class="chip-row" id="detectedChips"></div>
+                  <div class="ai-readout" id="aiReadout">
+                    <div>
+                      <span>Status</span>
+                      <strong>Upload photo</strong>
+                    </div>
+                    <div>
+                      <span>Color</span>
+                      <strong>-</strong>
+                    </div>
+                    <div>
+                      <span>Pieces</span>
+                      <strong>-</strong>
+                    </div>
+                  </div>
+                  <label>
+                    <span>Occasion</span>
+                    <input name="occasion" placeholder="Class, dinner, errands" />
+                  </label>
+                  <label>
+                    <span>Share</span>
+                    <select name="visibility">
+                      <option value="friends">Friends</option>
+                      <option value="private">Private</option>
+                      <option value="public">Public</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Note</span>
+                    <input name="notes" placeholder="Comfortable, repeat with boots" />
+                  </label>
+                  <button class="primary-button" type="submit">Log outfit</button>
+                  <p class="save-status" id="saveStatus" aria-live="polite"></p>
+                </div>
+              </form>
+            </section>
+
+            <section class="stats-strip" aria-label="Wardrobe summary">
+              <article>
+                <span>Closet</span>
+                <strong id="itemCount">0 items</strong>
+              </article>
+              <article>
+                <span>Outfit logs</span>
+                <strong id="outfitCount">0 logs</strong>
+              </article>
+              <article>
+                <span>Purchases</span>
+                <strong id="purchaseCount">0 items</strong>
+              </article>
+              <article>
+                <span>This month</span>
+                <strong id="monthSpend">$0 bought</strong>
+              </article>
+            </section>
+
+            <section class="style-brief" aria-label="Style brief">
+              <article>
+                <p class="kicker">Style brief</p>
+                <h2>Wardrobe pulse</h2>
+                <p id="styleSummary">Loading your closet mix.</p>
+              </article>
+              <article class="brief-highlight">
+                <div class="brief-photo" id="repeatHeroPhoto"></div>
+                <div>
+                  <span>Most repeated</span>
+                  <strong id="repeatHero">-</strong>
+                </div>
+              </article>
+              <article class="brief-highlight">
+                <div class="brief-photo" id="lowRepeatHeroPhoto"></div>
+                <div>
+                  <span>Needs a moment</span>
+                  <strong id="lowRepeatHero">-</strong>
+                </div>
+              </article>
+              <article>
+                <span>Palette</span>
+                <div class="palette-strip" id="paletteStrip"></div>
+              </article>
+            </section>
           </section>
 
-          <section class="stats-strip" aria-label="Wardrobe summary">
-            <article>
-              <span>Closet</span>
-              <strong id="itemCount">0</strong>
-            </article>
-            <article>
-              <span>Outfit logs</span>
-              <strong id="outfitCount">0</strong>
-            </article>
-            <article>
-              <span>Purchases</span>
-              <strong id="purchaseCount">0</strong>
-            </article>
-            <article>
-              <span>This month</span>
-              <strong id="monthSpend">$0</strong>
-            </article>
-          </section>
-
-          <section class="two-up">
+          <section class="view-section" id="outfits" data-view="outfits">
             <section class="panel" aria-labelledby="logHeading">
               <div class="panel-head">
                 <p class="kicker">Outfit history</p>
@@ -93,8 +147,21 @@
               </div>
               <div class="outfit-log" id="outfitLog"></div>
             </section>
+          </section>
 
-            <section class="panel" aria-labelledby="addHeading">
+          <section class="view-section" id="closet" data-view="closet">
+            <section class="panel" aria-labelledby="closetHeading">
+            <div class="panel-head inline">
+              <div>
+                <p class="kicker">Inventory</p>
+                <h2 id="closetHeading">Closet board</h2>
+              </div>
+              <div class="filter-bar" id="categoryFilters"></div>
+            </div>
+            <div class="closet-grid" id="closetGrid"></div>
+          </section>
+
+            <section class="panel compact-intake" aria-labelledby="addHeading">
               <div class="panel-head">
                 <p class="kicker">Closet intake</p>
                 <h2 id="addHeading">Add one piece</h2>
@@ -135,18 +202,27 @@
             </section>
           </section>
 
-          <section class="panel" id="closet" aria-labelledby="closetHeading">
-            <div class="panel-head inline">
-              <div>
-                <p class="kicker">Inventory</p>
-                <h2 id="closetHeading">Closet board</h2>
+          <section class="view-section" id="suggestions" data-view="suggestions">
+            <section class="panel" aria-labelledby="suggestHeading">
+              <div class="panel-head inline">
+                <div>
+                  <p class="kicker">AI outfit suggestions</p>
+                  <h2 id="suggestHeading">Closet-aware recommendations</h2>
+                  <p class="section-note">Tell Threadline where you&apos;re going and what you&apos;re optimizing for. It will build outfits from your closet, surface low-repeat pieces, and flag wishlist items that would complete the look.</p>
+                </div>
+                <form class="suggestion-form" id="suggestionForm">
+                  <input name="occasion" placeholder="Occasion" />
+                  <input name="weather" placeholder="Weather" />
+                  <input name="goal" placeholder="Shopping goal" />
+                  <button class="primary-button" type="submit">Suggest</button>
+                </form>
               </div>
-              <div class="filter-bar" id="categoryFilters"></div>
-            </div>
-            <div class="closet-grid" id="closetGrid"></div>
+              <div class="suggestion-grid" id="suggestionGrid"></div>
+            </section>
           </section>
 
-          <section class="panel" id="purchases" aria-labelledby="purchaseHeading">
+          <section class="view-section" id="purchases" data-view="purchases">
+          <section class="panel" aria-labelledby="purchaseHeading">
             <div class="panel-head">
               <p class="kicker">Receipts and wishlists</p>
               <h2 id="purchaseHeading">Purchase tracker</h2>
@@ -179,17 +255,105 @@
                   <option value="watch">Wishlist</option>
                 </select>
               </label>
+              <label>
+                <span>Share</span>
+                <select name="visibility">
+                  <option value="private">Private</option>
+                  <option value="friends">Friends</option>
+                  <option value="public">Public</option>
+                </select>
+              </label>
               <button class="primary-button" type="submit">Track</button>
             </form>
+            <form class="import-form" id="importForm">
+              <label>
+                <span>Product link or receipt</span>
+                <textarea name="importText" placeholder="Paste a store link, product title, or receipt line"></textarea>
+              </label>
+              <button class="primary-button" type="submit">Import</button>
+            </form>
+            <div class="integration-strip" aria-label="Demo shopping integrations">
+              <article>
+                <strong>Store link</strong>
+                <span>Detects item, price, and category from pasted product text.</span>
+              </article>
+              <article>
+                <strong>Receipt scan</strong>
+                <span>Turns a receipt line into a wishlist or bought item.</span>
+              </article>
+              <article>
+                <strong>Closet sync</strong>
+                <span>The Closet button stages a purchased item as a new closet piece.</span>
+              </article>
+            </div>
             <div class="purchase-list" id="shoppingList"></div>
           </section>
+          </section>
 
-          <section class="panel" id="friends" aria-labelledby="friendsHeading">
-            <div class="panel-head">
-              <p class="kicker">Friends</p>
-              <h2 id="friendsHeading">What everyone is wearing</h2>
-            </div>
-            <div class="friend-feed" id="friendFeed"></div>
+          <section class="view-section" id="friends" data-view="friends">
+            <section class="friends-layout">
+              <section class="panel" aria-labelledby="friendsHeading">
+                <div class="panel-head inline">
+                  <div>
+                    <p class="kicker">Friends</p>
+                    <h2 id="friendsHeading">What everyone is wearing</h2>
+                  </div>
+                  <form class="friend-form" id="friendForm">
+                    <input name="name" required placeholder="Name" />
+                    <input name="handle" placeholder="@handle" />
+                    <button class="primary-button" type="submit">Add</button>
+                  </form>
+                </div>
+                <div class="friend-feed" id="friendFeed"></div>
+              </section>
+              <section class="panel" aria-labelledby="sharingHeading">
+                <div class="panel-head">
+                  <p class="kicker">Privacy</p>
+                  <h2 id="sharingHeading">Sharing controls</h2>
+                </div>
+                <div class="share-preview" aria-label="Sharing preview">
+                  <article>
+                    <span>Outfits</span>
+                    <strong id="outfitSharePreview">Friends</strong>
+                  </article>
+                  <article>
+                    <span>Purchases</span>
+                    <strong id="purchaseSharePreview">Private</strong>
+                  </article>
+                  <article>
+                    <span>Friend requests</span>
+                    <strong id="friendApprovalPreview">Approval on</strong>
+                  </article>
+                </div>
+              <form class="settings-form" id="privacyForm">
+                <label>
+                  <span>Outfit default</span>
+                  <select name="outfitDefault">
+                    <option value="friends">Friends</option>
+                    <option value="private">Private</option>
+                    <option value="public">Public</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Purchase default</span>
+                  <select name="purchaseDefault">
+                    <option value="private">Private</option>
+                    <option value="friends">Friends</option>
+                    <option value="public">Public</option>
+                  </select>
+                </label>
+                <label class="check-row">
+                  <input name="shareClosetStats" type="checkbox" />
+                  <span>Share closet stats</span>
+                </label>
+                <label class="check-row">
+                  <input name="friendApprovals" type="checkbox" />
+                  <span>Require friend approvals</span>
+                </label>
+                <button class="primary-button" type="submit">Save privacy</button>
+              </form>
+              </section>
+            </section>
           </section>
         </section>
       </main>
@@ -201,6 +365,7 @@
         <div class="item-copy">
           <h3></h3>
           <p class="item-meta"></p>
+          <div class="item-swatches"></div>
           <div class="item-actions">
             <button type="button" data-action="wear">Wear</button>
             <button type="button" data-action="delete">Delete</button>

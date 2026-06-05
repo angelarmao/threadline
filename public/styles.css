@@ -39,7 +39,8 @@ body {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -197,7 +198,6 @@ label {
 
 .canvas {
   display: grid;
-  gap: 22px;
   padding: 22px;
   background:
     linear-gradient(90deg, rgba(21, 21, 21, 0.045) 1px, transparent 1px),
@@ -206,10 +206,19 @@ label {
   background-size: 72px 72px;
 }
 
+.view-section {
+  display: none;
+  gap: 22px;
+}
+
+.view-section.active {
+  display: grid;
+}
+
 .hero-board {
   display: grid;
-  grid-template-columns: minmax(230px, 0.56fr) minmax(520px, 1.44fr);
-  gap: 18px;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  gap: 14px;
   align-items: stretch;
   border: 2px solid var(--line);
   background: rgba(255, 253, 247, 0.95);
@@ -227,8 +236,8 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 360px;
-  padding: 20px 22px;
+  min-height: 320px;
+  padding: 18px;
   border-right: 2px solid var(--line);
   background: #fffdf7;
 }
@@ -248,13 +257,22 @@ p {
 }
 
 h1 {
-  max-width: 360px;
+  max-width: 260px;
   margin-bottom: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 3.6vw, 3.85rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 500;
-  line-height: 0.98;
+  line-height: 1.02;
   letter-spacing: 0;
+}
+
+.hero-subcopy,
+.section-note {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 h2 {
@@ -271,9 +289,9 @@ h3 {
 
 .outfit-card {
   display: grid;
-  grid-template-columns: minmax(230px, 0.82fr) minmax(250px, 1fr);
-  gap: 18px;
-  padding: 18px;
+  grid-template-columns: minmax(190px, 0.72fr) minmax(250px, 1fr);
+  gap: 14px;
+  padding: 14px;
   background: transparent;
 }
 
@@ -304,7 +322,7 @@ h3 {
 }
 
 .outfit-drop .photo-preview {
-  min-height: 430px;
+  min-height: 350px;
 }
 
 .photo-preview.has-image {
@@ -326,6 +344,20 @@ h3 {
   flex-wrap: wrap;
   gap: 8px;
   min-height: 36px;
+}
+
+.empty-inline,
+.save-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.save-status {
+  min-height: 22px;
+  color: var(--ink);
+  font-weight: 900;
 }
 
 .chip {
@@ -376,7 +408,8 @@ label span {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   min-height: 43px;
   padding: 0 10px;
@@ -388,10 +421,67 @@ select {
 
 input:focus,
 select:focus,
+textarea:focus,
 button:focus-visible,
 a:focus-visible {
   outline: 4px solid rgba(244, 154, 194, 0.55);
   outline-offset: 2px;
+}
+
+textarea {
+  min-height: 86px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.ai-readout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 2px solid var(--line);
+  background: white;
+}
+
+.ai-readout div {
+  min-height: 82px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-right: 2px solid var(--line);
+}
+
+.ai-readout div:last-child {
+  border-right: 0;
+}
+
+.ai-readout span,
+.share-preview span,
+.integration-strip span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ai-readout strong {
+  font-size: 0.88rem;
+  line-height: 1.25;
+}
+
+.recognition-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.recognition-head .status-button {
+  min-width: 112px;
+  white-space: normal;
+}
+
+.recognition-head h2 {
+  font-size: 1.35rem;
 }
 
 .stats-strip {
@@ -417,8 +507,70 @@ a:focus-visible {
 
 .stats-strip strong {
   font-family: Georgia, serif;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 500;
+  line-height: 1.05;
+}
+
+.style-brief {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.style-brief article {
+  min-height: 126px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 16px;
+  border: 2px solid var(--line);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.style-brief article:first-child {
+  background: var(--butter);
+}
+
+.style-brief span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.style-brief strong {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.brief-highlight {
+  grid-template-columns: 82px minmax(0, 1fr);
+  align-items: center;
+}
+
+.brief-photo {
+  width: 82px;
+  min-height: 98px;
+  border: 2px solid var(--line);
+  background: var(--lavender);
+  background-size: cover;
+  background-position: center;
+}
+
+.palette-strip,
+.item-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.palette-strip span,
+.item-swatches span {
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--line);
 }
 
 .two-up {
@@ -449,6 +601,10 @@ a:focus-visible {
   gap: 12px;
 }
 
+.outfit-log {
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
 .log-card,
 .purchase-row,
 .friend-card,
@@ -459,14 +615,14 @@ a:focus-visible {
 
 .log-card {
   display: grid;
-  grid-template-columns: 96px 1fr;
+  grid-template-columns: 112px 1fr;
   gap: 12px;
   padding: 10px;
 }
 
 .log-thumb,
 .friend-photo {
-  min-height: 108px;
+  min-height: 126px;
   border: 2px solid var(--line);
   background: var(--lavender);
   background-size: cover;
@@ -488,12 +644,23 @@ a:focus-visible {
 
 .item-form {
   display: grid;
-  grid-template-columns: minmax(170px, 220px) 1fr;
+  grid-template-columns: minmax(150px, 190px) 1fr;
   gap: 14px;
 }
 
+.compact-intake .item-form {
+  grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+}
+
+.compact-intake .photo-preview.small {
+  min-height: 150px;
+}
+
 .form-grid,
-.purchase-form {
+.purchase-form,
+.suggestion-form,
+.friend-form,
+.settings-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
@@ -524,12 +691,13 @@ a:focus-visible {
 
 .closet-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px;
 }
 
 .closet-card {
-  min-height: 300px;
+  min-width: 0;
+  min-height: 360px;
   display: grid;
   grid-template-rows: 1fr auto;
   border: 2px solid var(--line);
@@ -537,7 +705,7 @@ a:focus-visible {
 }
 
 .item-photo {
-  min-height: 178px;
+  min-height: 220px;
   border-bottom: 2px solid var(--line);
   background:
     linear-gradient(135deg, rgba(244, 154, 194, 0.7), rgba(184, 223, 241, 0.7)),
@@ -550,6 +718,11 @@ a:focus-visible {
   display: grid;
   gap: 8px;
   padding: 10px;
+  min-width: 0;
+}
+
+.item-copy h3 {
+  overflow-wrap: anywhere;
 }
 
 .item-meta {
@@ -557,6 +730,15 @@ a:focus-visible {
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.35;
+}
+
+.item-swatches {
+  min-height: 28px;
+}
+
+.item-swatches span {
+  width: 22px;
+  height: 22px;
 }
 
 .item-actions {
@@ -583,7 +765,134 @@ a:focus-visible {
 
 .purchase-form {
   margin-bottom: 14px;
-  grid-template-columns: 1.2fr 0.95fr 0.7fr 0.8fr auto;
+  grid-template-columns: 1.2fr 0.9fr 0.65fr 0.75fr 0.75fr auto;
+}
+
+.suggestion-form {
+  width: min(620px, 100%);
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+}
+
+.suggestion-grid,
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.suggestion-card {
+  position: relative;
+  min-height: 190px;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 14px;
+  border: 2px solid var(--line);
+  background: white;
+}
+
+.suggestion-score {
+  width: fit-content;
+  min-height: 34px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 9px;
+  border: 2px solid var(--line);
+  background: var(--yellow);
+  font-weight: 900;
+}
+
+.reason-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.reason-row span {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 2px solid var(--line);
+  background: var(--mint);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.import-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+
+.integration-strip,
+.share-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.integration-strip article,
+.share-preview article {
+  min-height: 96px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 12px;
+  border: 2px solid var(--line);
+  background: white;
+}
+
+.integration-strip article:nth-child(2),
+.share-preview article:nth-child(2) {
+  background: var(--butter);
+}
+
+.integration-strip article:nth-child(3),
+.share-preview article:nth-child(3) {
+  background: var(--lavender);
+}
+
+.friend-form {
+  width: min(430px, 100%);
+  grid-template-columns: 1fr 1fr auto;
+}
+
+.friends-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+.settings-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.settings-form {
+  grid-template-columns: 1fr;
+  padding: 14px;
+  border: 2px solid var(--line);
+  background: white;
+}
+
+.check-row {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: start;
+}
+
+.check-row input {
+  width: 22px;
+  min-height: 22px;
+}
+
+.check-row span {
+  color: var(--ink);
+  text-transform: none;
 }
 
 .purchase-row {
@@ -620,8 +929,12 @@ a:focus-visible {
 }
 
 .friend-card {
-  grid-template-columns: 132px minmax(0, 1fr);
+  grid-template-columns: 126px minmax(0, 1fr);
   padding: 10px;
+}
+
+.friend-card .status-pill {
+  margin-top: 8px;
 }
 
 .friend-card:nth-child(2n) .friend-photo {
@@ -637,11 +950,13 @@ a:focus-visible {
   color: var(--muted);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 900px) {
   .app-frame,
   .hero-board,
   .outfit-card,
   .two-up,
+  .friends-layout,
+  .style-brief,
   .item-form {
     grid-template-columns: 1fr;
   }
@@ -667,6 +982,17 @@ a:focus-visible {
   .purchase-form {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .suggestion-form,
+  .suggestion-grid,
+  .settings-grid,
+  .friend-form,
+  .compact-intake .item-form,
+  .import-form,
+  .integration-strip,
+  .share-preview {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 680px) {
@@ -689,7 +1015,7 @@ a:focus-visible {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.35rem;
   }
 
   .hero-copy {
@@ -701,8 +1027,17 @@ a:focus-visible {
   }
 
   .stats-strip,
+  .style-brief,
   .form-grid,
   .purchase-form,
+  .suggestion-form,
+  .suggestion-grid,
+  .settings-grid,
+  .friend-form,
+  .import-form,
+  .integration-strip,
+  .share-preview,
+  .ai-readout,
   .closet-grid,
   .friend-card,
   .log-card {

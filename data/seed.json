@@ -1,111 +1,303 @@
 {
+  "profile": {
+    "id": "user_angela",
+    "name": "Angela",
+    "handle": "@threadline",
+    "city": "San Francisco",
+    "styleGoals": "Repeat more favorites, buy fewer one-off pieces, and find accessories that work across outfits.",
+    "weatherPreference": "Mild"
+  },
+  "privacy": {
+    "outfitDefault": "friends",
+    "purchaseDefault": "private",
+    "shareClosetStats": true,
+    "friendApprovals": true
+  },
   "items": [
+    {
+      "id": "item_blue_ruffle_top",
+      "name": "Blue ruffle cardigan top",
+      "category": "Tops",
+      "colors": [
+        "blue"
+      ],
+      "season": "Spring",
+      "price": 58,
+      "source": "Closet",
+      "wearCount": 4,
+      "notes": "Bright fitted top for cafe days and neutral trousers.",
+      "visibility": "private",
+      "image": "/assets/demo/blue-ruffle-top.png"
+    },
+    {
+      "id": "item_yellow_sheer_skirt",
+      "name": "Butter yellow sheer skirt",
+      "category": "Bottoms",
+      "colors": [
+        "yellow",
+        "cream"
+      ],
+      "season": "Spring",
+      "price": 78,
+      "source": "Closet",
+      "wearCount": 2,
+      "notes": "Soft midi skirt with white long sleeves and socks.",
+      "visibility": "private",
+      "image": "/assets/demo/yellow-skirt-street.png"
+    },
+    {
+      "id": "item_grey_collar_vest",
+      "name": "Grey collar vest top",
+      "category": "Tops",
+      "colors": [
+        "gray",
+        "black"
+      ],
+      "season": "Fall",
+      "price": 64,
+      "source": "Closet",
+      "wearCount": 3,
+      "notes": "Structured grey top that works with loose denim.",
+      "visibility": "private",
+      "image": "/assets/demo/grey-vest-park.png"
+    },
+    {
+      "id": "item_black_cropped_vest",
+      "name": "Black cropped vest",
+      "category": "Outerwear",
+      "colors": [
+        "black",
+        "cream"
+      ],
+      "season": "Spring",
+      "price": 88,
+      "source": "Closet",
+      "wearCount": 2,
+      "notes": "Sharp layer for cream tanks and midi skirts.",
+      "visibility": "private",
+      "image": "/assets/demo/black-vest-midi.png"
+    },
+    {
+      "id": "item_brown_flare_skirt",
+      "name": "Chocolate flare midi skirt",
+      "category": "Bottoms",
+      "colors": [
+        "brown",
+        "cream"
+      ],
+      "season": "Fall",
+      "price": 92,
+      "source": "Closet",
+      "wearCount": 3,
+      "notes": "A soft city skirt with movement and a belted waist.",
+      "visibility": "private",
+      "image": "/assets/demo/brown-skirt-city.png"
+    },
+    {
+      "id": "item_red_cardigan",
+      "name": "Cherry pearl-button cardigan",
+      "category": "Tops",
+      "colors": [
+        "red",
+        "cream"
+      ],
+      "season": "Spring",
+      "price": 68,
+      "source": "Closet",
+      "wearCount": 1,
+      "notes": "Cropped cardigan for layering over mini dresses or denim.",
+      "visibility": "private",
+      "image": "/assets/demo/red-cardigan.png"
+    },
+    {
+      "id": "item_sage_flats",
+      "name": "Sage bow ballet flats",
+      "category": "Shoes",
+      "colors": [
+        "green",
+        "sage"
+      ],
+      "season": "Spring",
+      "price": 84,
+      "source": "Closet",
+      "wearCount": 2,
+      "notes": "Soft green flats for dresses, skirts, and coffee walks.",
+      "visibility": "private",
+      "image": "/assets/demo/sage-ballet-flats.png"
+    },
+    {
+      "id": "item_beaded_bag",
+      "name": "Pastel beaded shoulder bag",
+      "category": "Bags",
+      "colors": [
+        "pink",
+        "pearl",
+        "lavender"
+      ],
+      "season": "Summer",
+      "price": 76,
+      "source": "Closet",
+      "wearCount": 1,
+      "notes": "Playful bag that makes simple outfits feel styled.",
+      "visibility": "private",
+      "image": "/assets/demo/beaded-shoulder-bag.png"
+    },
+    {
+      "id": "item_denim_jacket",
+      "name": "Cropped denim jacket look",
+      "category": "Outerwear",
+      "colors": [
+        "denim",
+        "white"
+      ],
+      "season": "Spring",
+      "price": 110,
+      "source": "Closet",
+      "wearCount": 3,
+      "notes": "Light denim layer over a white mini for breezy days.",
+      "visibility": "private",
+      "image": "/assets/demo/denim-mini-look.png"
+    },
     {
       "id": "item_silver_mini",
       "name": "Silver strapless mini dress",
       "category": "Dresses",
-      "colors": ["silver", "gray"],
+      "colors": [
+        "silver",
+        "gray"
+      ],
       "season": "Summer",
       "price": 138,
       "source": "Closet",
       "wearCount": 4,
       "notes": "Night-out dress with gold heels and a small clutch.",
+      "visibility": "private",
       "image": "/assets/demo/silver-mini-dress.jpg"
     },
     {
       "id": "item_striped_skirt",
       "name": "Sunset stripe mini skirt",
       "category": "Bottoms",
-      "colors": ["pink", "yellow", "brown"],
+      "colors": [
+        "pink",
+        "yellow",
+        "brown"
+      ],
       "season": "Summer",
       "price": 72,
       "source": "Closet",
       "wearCount": 5,
       "notes": "Best with a fitted black top and low heels.",
+      "visibility": "private",
       "image": "/assets/demo/striped-mini-skirt.jpg"
     },
     {
       "id": "item_black_boatneck",
       "name": "Black boatneck top",
       "category": "Tops",
-      "colors": ["black"],
+      "colors": [
+        "black"
+      ],
       "season": "All year",
       "price": 54,
       "source": "Closet",
-      "wearCount": 9,
+      "wearCount": 6,
       "notes": "Clean long sleeve top for short skirts.",
+      "visibility": "private",
       "image": "/assets/demo/striped-mini-skirt.jpg"
     },
     {
       "id": "item_blue_midi",
       "name": "Cobalt blue midi skirt",
       "category": "Bottoms",
-      "colors": ["blue"],
+      "colors": [
+        "blue"
+      ],
       "season": "Spring",
       "price": 86,
       "source": "Closet",
       "wearCount": 6,
       "notes": "Coffee-run skirt with a pale fitted top.",
+      "visibility": "private",
       "image": "/assets/demo/blue-skirt-coffee.jpg"
     },
     {
       "id": "item_sky_satin_set",
       "name": "Sky blue satin set",
       "category": "Dresses",
-      "colors": ["blue", "silver"],
+      "colors": [
+        "blue",
+        "silver"
+      ],
       "season": "Spring",
       "price": 124,
       "source": "Closet",
       "wearCount": 2,
       "notes": "Soft blue two-piece for dinners.",
+      "visibility": "private",
       "image": "/assets/demo/blue-satin-set.jpg"
     },
     {
       "id": "item_yellow_shorts",
       "name": "Lemon yellow micro shorts",
       "category": "Bottoms",
-      "colors": ["yellow"],
+      "colors": [
+        "yellow"
+      ],
       "season": "Summer",
       "price": 48,
       "source": "Closet",
       "wearCount": 7,
       "notes": "Travel shorts with a white henley and flip-flops.",
+      "visibility": "private",
       "image": "/assets/demo/yellow-shorts-street.jpg"
     },
     {
       "id": "item_cream_mini",
       "name": "Ivory eyelet mini dress",
       "category": "Dresses",
-      "colors": ["ivory", "cream"],
+      "colors": [
+        "ivory",
+        "cream"
+      ],
       "season": "Summer",
       "price": 118,
       "source": "Closet",
       "wearCount": 5,
       "notes": "Warm-weather dress for dinners and trips.",
+      "visibility": "private",
       "image": "/assets/demo/cream-mini-dress.jpeg"
     },
     {
       "id": "item_black_floral",
       "name": "Black rose slip dress",
       "category": "Dresses",
-      "colors": ["black", "red"],
+      "colors": [
+        "black",
+        "red"
+      ],
       "season": "All year",
       "price": 92,
       "source": "Closet",
       "wearCount": 3,
       "notes": "Good with boots or a cardigan.",
+      "visibility": "private",
       "image": "/assets/demo/black-floral-dress.jpg"
     },
     {
       "id": "item_cream_knit",
       "name": "Cream tie-front knit top",
       "category": "Tops",
-      "colors": ["cream", "black"],
+      "colors": [
+        "cream",
+        "black"
+      ],
       "season": "Spring",
       "price": 64,
       "source": "Closet",
       "wearCount": 7,
       "notes": "Pairs with loose denim and simple sandals.",
+      "visibility": "private",
       "image": "/assets/demo/cream-knit-top.jpeg"
     }
   ],
@@ -117,7 +309,11 @@
       "price": 48,
       "plannedWears": 8,
       "reason": "Bought for the silver mini dress outfit.",
-      "status": "bought"
+      "status": "bought",
+      "store": "Local boutique",
+      "url": "",
+      "receiptText": "",
+      "visibility": "friends"
     },
     {
       "id": "shop_gold_slingbacks",
@@ -126,7 +322,11 @@
       "price": 96,
       "plannedWears": 10,
       "reason": "Would work with the silver mini and ivory eyelet dress.",
-      "status": "watch"
+      "status": "watch",
+      "store": "Wishlist",
+      "url": "",
+      "receiptText": "",
+      "visibility": "private"
     },
     {
       "id": "shop_pink_check_tote",
@@ -135,7 +335,11 @@
       "price": 52,
       "plannedWears": 9,
       "reason": "Saved for the lemon shorts travel look.",
-      "status": "watch"
+      "status": "watch",
+      "store": "Wishlist",
+      "url": "",
+      "receiptText": "",
+      "visibility": "private"
     },
     {
       "id": "shop_rosette_clip",
@@ -144,16 +348,160 @@
       "price": 24,
       "plannedWears": 8,
       "reason": "Bought to pull red from the black floral dress.",
-      "status": "bought"
+      "status": "bought",
+      "store": "Receipt import",
+      "url": "",
+      "receiptText": "",
+      "visibility": "friends"
     }
   ],
   "outfits": [
+    {
+      "id": "fit_blue_cafe",
+      "date": "May 23",
+      "occasion": "Cafe",
+      "notes": "Blue ruffle cardigan top with relaxed taupe trousers.",
+      "detectedTags": [
+        "blue ruffle top",
+        "taupe trousers",
+        "cafe",
+        "soft knit"
+      ],
+      "itemIds": [
+        "item_blue_ruffle_top"
+      ],
+      "confidence": 0.86,
+      "visibility": "friends",
+      "image": "/assets/demo/blue-ruffle-top.png"
+    },
+    {
+      "id": "fit_yellow_skirt",
+      "date": "May 22",
+      "occasion": "Afternoon walk",
+      "notes": "White long sleeve, butter yellow sheer skirt, white socks.",
+      "detectedTags": [
+        "white long sleeve",
+        "yellow midi skirt",
+        "woven bag",
+        "walk"
+      ],
+      "itemIds": [
+        "item_yellow_sheer_skirt"
+      ],
+      "confidence": 0.84,
+      "visibility": "friends",
+      "image": "/assets/demo/yellow-skirt-street.png"
+    },
+    {
+      "id": "fit_grey_vest",
+      "date": "May 21",
+      "occasion": "Coffee run",
+      "notes": "Grey collar vest top, loose denim, black ballet flats.",
+      "detectedTags": [
+        "grey vest",
+        "loose denim",
+        "black flats",
+        "coffee"
+      ],
+      "itemIds": [
+        "item_grey_collar_vest"
+      ],
+      "confidence": 0.88,
+      "visibility": "public",
+      "image": "/assets/demo/grey-vest-sitting.png"
+    },
+    {
+      "id": "fit_black_vest",
+      "date": "May 20",
+      "occasion": "Gallery walk",
+      "notes": "Black cropped vest, cream tank, beige button midi skirt.",
+      "detectedTags": [
+        "black vest",
+        "cream tank",
+        "beige midi skirt",
+        "mary janes"
+      ],
+      "itemIds": [
+        "item_black_cropped_vest"
+      ],
+      "confidence": 0.86,
+      "visibility": "friends",
+      "image": "/assets/demo/black-vest-midi.png"
+    },
+    {
+      "id": "fit_brown_city",
+      "date": "May 19",
+      "occasion": "City day",
+      "notes": "White lace cami with a chocolate flare midi skirt.",
+      "detectedTags": [
+        "white cami",
+        "brown midi skirt",
+        "tan shoulder bag",
+        "city"
+      ],
+      "itemIds": [
+        "item_brown_flare_skirt"
+      ],
+      "confidence": 0.83,
+      "visibility": "friends",
+      "image": "/assets/demo/brown-skirt-city.png"
+    },
+    {
+      "id": "fit_tuesday",
+      "date": "May 18",
+      "occasion": "Gallery",
+      "notes": "Cherry cardigan, ivory mini, sage flats, pastel beaded bag.",
+      "detectedTags": [
+        "red cardigan",
+        "ivory mini",
+        "sage flats",
+        "beaded bag"
+      ],
+      "itemIds": [
+        "item_red_cardigan",
+        "item_cream_mini",
+        "item_sage_flats",
+        "item_beaded_bag"
+      ],
+      "confidence": 0.9,
+      "visibility": "friends",
+      "image": "/assets/demo/red-cardigan.png"
+    },
+    {
+      "id": "fit_weekend",
+      "date": "May 19",
+      "occasion": "Weekend market",
+      "notes": "Cropped denim jacket look with a pastel shoulder bag.",
+      "detectedTags": [
+        "denim jacket",
+        "white mini",
+        "pastel bag",
+        "market"
+      ],
+      "itemIds": [
+        "item_denim_jacket",
+        "item_beaded_bag"
+      ],
+      "confidence": 0.84,
+      "visibility": "public",
+      "image": "/assets/demo/denim-mini-look.png"
+    },
     {
       "id": "fit_monday",
       "date": "May 17",
       "occasion": "Dinner",
       "notes": "Silver mini dress, gold heels, hoop earrings, leopard clutch.",
-      "detectedTags": ["silver dress", "gold heels", "hoop earrings", "leopard clutch"],
+      "detectedTags": [
+        "silver dress",
+        "gold heels",
+        "hoop earrings",
+        "leopard clutch"
+      ],
+      "itemIds": [
+        "item_silver_mini"
+      ],
+      "confidence": 0.86,
+      "visibility": "friends",
       "image": "/assets/demo/silver-mini-dress.jpg"
     },
     {
@@ -161,7 +509,17 @@
       "date": "May 16",
       "occasion": "City walk",
       "notes": "Black boatneck top with the sunset stripe mini skirt.",
-      "detectedTags": ["black boatneck top", "striped mini skirt", "cream heels"],
+      "detectedTags": [
+        "black boatneck top",
+        "striped mini skirt",
+        "cream heels"
+      ],
+      "itemIds": [
+        "item_black_boatneck",
+        "item_striped_skirt"
+      ],
+      "confidence": 0.82,
+      "visibility": "friends",
       "image": "/assets/demo/striped-mini-skirt.jpg"
     },
     {
@@ -169,7 +527,16 @@
       "date": "May 15",
       "occasion": "Coffee",
       "notes": "Pale fitted top, cobalt midi skirt, shoulder bag.",
-      "detectedTags": ["pale fitted top", "cobalt midi skirt", "logo bag"],
+      "detectedTags": [
+        "pale fitted top",
+        "cobalt midi skirt",
+        "logo bag"
+      ],
+      "itemIds": [
+        "item_blue_midi"
+      ],
+      "confidence": 0.78,
+      "visibility": "private",
       "image": "/assets/demo/blue-skirt-coffee.jpg"
     },
     {
@@ -177,7 +544,16 @@
       "date": "May 14",
       "occasion": "Travel day",
       "notes": "White henley, lemon shorts, pink check tote.",
-      "detectedTags": ["white henley", "lemon shorts", "pink tote"],
+      "detectedTags": [
+        "white henley",
+        "lemon shorts",
+        "pink tote"
+      ],
+      "itemIds": [
+        "item_yellow_shorts"
+      ],
+      "confidence": 0.8,
+      "visibility": "friends",
       "image": "/assets/demo/yellow-shorts-street.jpg"
     }
   ],
@@ -185,34 +561,66 @@
     {
       "id": "friend_maya",
       "name": "Maya",
-      "activity": "Logged a sky blue satin set with pale pink pumps.",
-      "tags": ["blue satin set", "pink pumps", "dinner"],
+      "handle": "@maya",
+      "status": "accepted",
+      "activity": "Logged a blue ruffle cardigan top for cafe plans.",
+      "tags": [
+        "blue top",
+        "cafe",
+        "spring"
+      ],
       "color": "#f49ac2",
-      "image": "/assets/demo/blue-satin-set.jpg"
+      "image": "/assets/demo/blue-ruffle-top.png",
+      "shareOutfits": true,
+      "sharePurchases": false
     },
     {
       "id": "friend_lena",
       "name": "Lena",
-      "activity": "Wore a pink polka column dress and saved gold sandals.",
-      "tags": ["pink dress", "sandals", "wishlist"],
+      "handle": "@lena",
+      "status": "accepted",
+      "activity": "Wore a butter yellow sheer skirt on an afternoon walk.",
+      "tags": [
+        "yellow skirt",
+        "walk",
+        "soft palette"
+      ],
       "color": "#c9ecd8",
-      "image": "/assets/demo/pink-polka-dress.jpeg"
+      "image": "/assets/demo/yellow-skirt-street.png",
+      "shareOutfits": true,
+      "sharePurchases": true
     },
     {
       "id": "friend_jules",
       "name": "Jules",
-      "activity": "Bought a red hair clip for a black rose slip dress.",
-      "tags": ["purchase", "red", "floral"],
+      "handle": "@jules",
+      "status": "pending",
+      "activity": "Saved a grey vest and loose denim formula.",
+      "tags": [
+        "grey vest",
+        "denim",
+        "wishlist"
+      ],
       "color": "#fff08a",
-      "image": "/assets/demo/black-floral-dress.jpg"
+      "image": "/assets/demo/grey-vest-sitting.png",
+      "shareOutfits": true,
+      "sharePurchases": false
     },
     {
       "id": "friend_noor",
       "name": "Noor",
-      "activity": "Repeated the cream tie-front knit with loose denim.",
-      "tags": ["cream knit", "denim", "repeat"],
+      "handle": "@noor",
+      "status": "accepted",
+      "activity": "Logged a black cropped vest with a beige midi skirt.",
+      "tags": [
+        "black vest",
+        "midi skirt",
+        "gallery"
+      ],
       "color": "#dceff6",
-      "image": "/assets/demo/cream-knit-top.jpeg"
+      "image": "/assets/demo/black-vest-midi.png",
+      "shareOutfits": true,
+      "sharePurchases": false
     }
   ]
 }
